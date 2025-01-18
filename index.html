@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Animation</title>
+  <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+  <div class="container">
+    <button class="trigger-btn">Click Me</button>
+    <div class="heart" id="heart"></div>
+  </div>
+
+  <script>
+    const button = document.querySelector('.trigger-btn');
+    const heart = document.querySelector('#heart');
+
+    button.addEventListener('click', () => {
+      heart.classList.add('animate');
+      setTimeout(() => {
+        heart.classList.remove('animate');
+      }, 1000); // Animation duration matches CSS
+    });
+  </script>
+</body>
+</html>
