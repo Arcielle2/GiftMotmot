@@ -146,7 +146,7 @@ body {
 }
 @media screen and (max-width: 800px) {
   .heart {
-    top: 70%; /* Moves heart lower */
+    top: 80%; /* Moves heart lower */
     left: 50%;
     width: 15px;
     height: 15px;
