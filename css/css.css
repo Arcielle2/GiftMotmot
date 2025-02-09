@@ -138,8 +138,8 @@ body {
 
 @media screen and (max-width: 600px) {
   .container .envelope-wrapper .envelope {
-    width: 50vw; /* Makes it fit smaller screens */
-    height: auto;
+    width: 80vw; /* Makes it fit smaller screens */
+    height: 230px;
   }  
 }
 @media screen and (max-width: 600px) {
