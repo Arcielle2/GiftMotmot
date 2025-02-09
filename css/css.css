@@ -141,7 +141,7 @@ body {
     width: 90vw; /* Makes it fit smaller screens */
     height: auto;
   }  
-
+}
 @media screen and (max-width: 600px) {
   .heart {
     top: 70%; /* Moves heart lower */
