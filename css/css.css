@@ -138,13 +138,13 @@ body {
 
 @media screen and (max-width: 600px) {
   .container .envelope-wrapper .envelope {
-    width: 90vw; /* Makes it fit smaller screens */
+    width: 50vw; /* Makes it fit smaller screens */
     height: auto;
   }  
 }
 @media screen and (max-width: 600px) {
   .heart {
-    top: 70%; /* Moves heart lower */
+    top: 50%; /* Moves heart lower */
     left: 50%;
     width: 15px;
     height: 15px;
