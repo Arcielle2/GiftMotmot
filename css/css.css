@@ -140,6 +140,8 @@ body {
   .container .envelope-wrapper .envelope {
     width: 90vw; /* Makes it fit smaller screens */
     height: auto;
+    justify-content: center;
+    align-items: center;
   }  
 }
 @media screen and (max-width: 800px) {
