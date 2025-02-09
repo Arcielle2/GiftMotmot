@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heart Animation</title>
+  <title>Letter</title>
   <link rel="stylesheet" href="css/css.css">
 </head>
 <body>
   <div class="container">
-    <button class="trigger-btn">Click Me</button>
-    <div class="heart" id="heart"></div>
+    <div class="heart" id="envelope-wrapper">
+      <div class = "envelope">
+        <div class = "letter">
+          <div class="text">
+
+
+            <strong>Hi Baby,</strong>\
+            <p>Hi babe, i just want to say sorry for the things i've done this past few days and even before. I'm so sorry i didn't take your words well po. I'm sorry that i realized it late na how those words meant to you. I really appreciate how you managed to how make things between us happy and enjoyable and kung pano mo minamake sure we bond with each other. I know i've did it so bad, but please forgive me po, sorry babe for hurting you. I care for your feelings baby, i'm sorry ifi'm too stubborn. Take my peace offering baby🥺, i know it's sweets but my real gift po is on the way pa lang. Sorry babe i know you don't want stuffs na, cause you have it na but i want to give to you cause i reall appreciate you. Please forgive me babe. I'm sorry Timothy. I love you so much🥺, mwaa</p>
+            <p></p>
+            <p>Arcielle</p>
+          </div>
+        </div>
+      </div>
+      <div class="heart"></div>
+    </div>
   </div>
 
-  <script>
-    const button = document.querySelector('.trigger-btn');
-    const heart = document.querySelector('#heart');
-
-    button.addEventListener('click', () => {
-      heart.classList.add('animate');
-      setTimeout(() => {
-        heart.classList.remove('animate');
-      }, 1000); // Animation duration matches CSS
-    });
-  </script>
 </body>
 </html>
