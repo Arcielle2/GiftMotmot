@@ -136,15 +136,15 @@ body {
   transition-delay: 0.4s;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .container .envelope-wrapper .envelope {
-    width: 80vw; /* Makes it fit smaller screens */
-    height: 230px;
+    width: 90vw; /* Makes it fit smaller screens */
+    height: auto;
   }  
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .heart {
-    top: 50%; /* Moves heart lower */
+    top: 70%; /* Moves heart lower */
     left: 50%;
     width: 15px;
     height: 15px;
