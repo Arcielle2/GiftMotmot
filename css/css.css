@@ -17,10 +17,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .container {
-  height: 130vh;
   display: grid;
   place-items: center;
 }
@@ -34,8 +34,10 @@ body {
 
 .container .envelope-wrapper .envelope {
   position: relative;
-  width: 400px; /* Increased width */
-  height: 230px;
+  width: 80vw;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 4 / 3;
 }
 
 .envelope-wrapper > .envelope::before {
@@ -44,8 +46,8 @@ body {
   top: 0;
   z-index: 2;
   border-top: 130px solid var(--envelope-tab);
-  border-right: 200px solid transparent; /* Adjusted */
-  border-left: 200px solid transparent; /* Adjusted */
+  border-right: 200px solid transparent;
+  border-left: 200px solid transparent;
   transform-origin: top;
   transition: all 0.5s ease-in-out 0.7s;
 }
@@ -57,38 +59,38 @@ body {
   width: 0;
   height: 0;
   border-top: 130px solid transparent;
-  border-right: 200px solid var(--envelope-cover); /* Adjusted */
+  border-right: 200px solid var(--envelope-cover);
   border-bottom: 100px solid var(--envelope-cover);
-  border-left: 200px solid var(--envelope-cover); /* Adjusted */
+  border-left: 200px solid var(--envelope-cover);
 }
 
 .envelope > .letter {
   position: absolute;
   bottom: 0;
   width: 90%;
-  height: 80%;
-  background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/476377987_3643621185938190_9205568414351007421_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=CyX_HuVH0tkQ7kNvgFgB89J&_nc_oc=Adjfnp_MisovTPezppJ4AjW-1IaDftRuMClcpmiRGu-37kQu5nDwjOL4I-ho0CNpWcztpYYfalysyAYwI-3HcDD4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEdULXi8-jIXiLmc16_NSMt53JJIV1Ibp34O9DhQllSGg&oe=67D0225B);
-  background-size: cover;
+  height: 100%;
+  background-image: url("juliana-silva.jpg");
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .container .envelope-wrapper .envelope .letter .text {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--txt-color);
   text-align: center;
-  font-size: 8.21px;
+  font-size: 9px;
 }
 
 .heart {
   position: absolute;
   top: 66%;
   left: 50%;
-  width: 20px; /* Slightly larger heart */
+  width: 20px;
   height: 20px;
   background: var(--heart-color);
   z-index: 4;
@@ -134,4 +136,25 @@ body {
 .flap .heart {
   transform: rotate(45deg);
   transition-delay: 0.4s;
+}
+
+/* RESPONSIVE FIXES */
+@media screen and (max-width: 600px) {
+  .container .envelope-wrapper .envelope {
+    width: 90vw;
+    height: auto;
+  }
+
+  .envelope > .letter {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .heart {
+    top: 70%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+  }
 }
