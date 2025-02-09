@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary: #fff;
   --bg-color: rgb(5, 53, 61);
   --bg-envelope-color: #f5edd1;
@@ -8,7 +8,8 @@
   --txt-color: #444;
   --heart-color: rgb(252, 8, 231);
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,66 +18,78 @@ body{
   align-items: center;
   justify-content: center;
 }
+
 .container {
-height: 100vh;
-display: grid;
-place-items: center;
+  height: 130vh;
+  display: grid;
+  place-items: center;
 }
+
 .container > .envelope-wrapper {
-background: var(--bg-envelope-color);
-box-shadow: 0 0 40px var(--shadow-color);
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+  transition: transform 1s ease-in-out;
+  justify-content: center;
 }
-.container .envelope-wrapper .envelope{
+
+.container .envelope-wrapper .envelope {
   position: relative;
-  width: 300px;
+  width: 400px; /* Increased width */
   height: 230px;
 }
-.envelope-wrapper > .envelope::before{
+
+.envelope-wrapper > .envelope::before {
   content: "";
   position: absolute;
   top: 0;
   z-index: 2;
   border-top: 130px solid var(--envelope-tab);
-  border-right: 150px solid transparent;
-  border-left: 150px solid transparent;
+  border-right: 200px solid transparent; /* Adjusted */
+  border-left: 200px solid transparent; /* Adjusted */
   transform-origin: top;
   transition: all 0.5s ease-in-out 0.7s;
 }
-.container .envelope-wrapper .envelope::after{
+
+.container .envelope-wrapper .envelope::after {
   content: "";
   position: absolute;
   z-index: 2;
   width: 0;
   height: 0;
   border-top: 130px solid transparent;
-  border-right: 150px solid var(--envelope-cover);
+  border-right: 200px solid var(--envelope-cover); /* Adjusted */
   border-bottom: 100px solid var(--envelope-cover);
-  border-left: 150px solid var(--envelope-cover);
+  border-left: 200px solid var(--envelope-cover); /* Adjusted */
 }
-.envelope > .letter{
+
+.envelope > .letter {
   position: absolute;
-  right: 20%;
   bottom: 0;
-  width: 54%;
+  width: 90%;
   height: 80%;
-  background: var(--primary);
+  background-image: url('Juliana Silva.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
-  transition: all  1s ease-in-out;
+  transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
-  padding: 20px 10px;
+  padding: 20px 20px;
 }
-.container .envelope-wrapper .envelope .letter .text{
+
+.container .envelope-wrapper .envelope .letter .text {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--txt-color);
-  text-align: left;
-  font-size: 10px;
+  text-align: center;
+  font-size: 8.21px;
 }
-.heart{
+
+.heart {
   position: absolute;
-  top: 50%;
+  top: 66%;
   left: 50%;
-  width: 15px;
-  height: 15px;
+  width: 20px; /* Slightly larger heart */
+  height: 20px;
   background: var(--heart-color);
   z-index: 4;
   transform: translate(-50%, -20%) rotate(-45deg);
@@ -84,31 +97,41 @@ box-shadow: 0 0 40px var(--shadow-color);
   box-shadow: 0 1px 6px var(--shadow-color);
   cursor: pointer;
 }
+
 .heart::before,
-.heart::after{
+.heart::after {
   content: "";
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background: var(--heart-color);
-  border-radius: 50%; 
+  border-radius: 50%;
 }
-.heart::before{
-  top: -7.5px;
+
+.heart::before {
+  top: -10px;
 }
-.heart::after{
-  right: -7.5px;
+
+.heart::after {
+  right: -10px;
 }
-.flap .envelope::before{
+
+.flap .envelope-wrapper {
+  transform: translateY(50px);
+}
+
+.flap .envelope::before {
   transform: rotateX(180deg);
   z-index: 0;
 }
+
 .flap .envelope .letter {
-  bottom: 100px;
+  bottom: 150px;
   transform: scale(1.5);
   transition-delay: 1s;
 }
-.flap .heart{
+
+.flap .heart {
   transform: rotate(45deg);
   transition-delay: 0.4s;
 }
